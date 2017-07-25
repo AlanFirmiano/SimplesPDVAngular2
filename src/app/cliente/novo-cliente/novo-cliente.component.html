@@ -5,22 +5,91 @@
   <div class="col s6">
     <form>
       <div class="row">
-        <h4 class="teal-text">Cadastrar Paciente</h4>
-        <div class="input-field col s12">
-          <input id="nome" type="text" [(ngModel)]="paciente.nome" [ngModelOptions]="{standalone: true}" class="validate">
-          <label for="nome" data-error="Invalido" data-sucess="Correto">Nome</label>
+        <h4 class="teal-text">Cadastrar Cliente</h4>
+
+        <div class="input-field col s12 m6 l9">
+          <input id="nome" type="text" [(ngModel)]="cliente.razao" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="nome" data-error="Invalido" data-sucess="Correto">Razão social</label>
         </div>
-        <div class="input-field col s12">
-          <input id="parente" type="text" [(ngModel)]="paciente.parente" [ngModelOptions]="{standalone: true}" class="validate">
-          <label for="parente" data-error="Invalido" data-sucess="Correto">Parente</label>
+        <div class="input-field col s12 m6 l3">
+          <input id="apelido" type="text" [(ngModel)]="cliente.apelido" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="apelido" data-error="Apelido Invalido" data-sucess="Correto">Apelido</label>
         </div>
-        <div class="input-field col s6">
-          <input id="telefone" type="tel" [(ngModel)]="paciente.telefone" [ngModelOptions]="{standalone: true}" class="validate">
+        <div class="input-field col s12 m6 l7">
+          <input id="rua" type="text" [(ngModel)]="cliente.endereco.rua" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="rua" data-error="Invalido" data-sucess="Correto">Endereço</label>
+        </div>
+        <div class="input-field col s12 m6 l5">
+          <input id="bairro" type="text" [(ngModel)]="cliente.endereco.bairro" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="bairro" data-error="Invalido" data-sucess="Correto">Bairro</label>
+        </div>
+        <div class="input-field col s12 m6 l4">
+          <input id="cidade" type="text" [(ngModel)]="cliente.endereco.cidade" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="cidade" data-error="Invalido" data-sucess="Correto">Cidade</label>
+        </div>
+        <div class="input-field col s12 m6 l2">
+          <input id="uf" type="text" [(ngModel)]="cliente.endereco.uf" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="uf" data-error="Invalido" data-sucess="Correto">UF</label>
+        </div>
+        <div class="input-field col s12 m6 l2">
+          <input id="numero" type="text" [(ngModel)]="cliente.endereco.numero" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="numero" data-error="Invalido" data-sucess="Correto">Numero</label>
+        </div>
+        <div class="input-field col s12 m6 l4">
+          <input id="cep" type="text" [(ngModel)]="cliente.endereco.cep" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="cep" data-error="Invalido" data-sucess="Correto">CEP</label>
+        </div>
+        <div class="input-field col s12 m6 l3">
+          <input id="telefone" type="tel" [(ngModel)]="cliente.contato.telefone" [ngModelOptions]="{standalone: true}" class="validate">
           <label for="telefone" data-error="Telefone Invalido" data-sucess="Correto">Telefone</label>
         </div>
-        <div class="input-field col s6">
-          <input id="telefoneParente" type="tel" [(ngModel)]="paciente.contatoParente" [ngModelOptions]="{standalone: true}" class="validate">
-          <label for="telefoneParente" data-error="Telefone Invalido" data-sucess="Correto">Telefone Parente</label>
+        <div class="input-field col s12 m6 l3">
+          <input id="celular" type="tel" [(ngModel)]="cliente.contato.celular" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="celular" data-error="Celular Invalido" data-sucess="Correto">Celular</label>
+        </div>
+        <div class="input-field col s12 m6 l6">
+          <input id="email" type="email" [(ngModel)]="cliente.contato.email" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="email" data-error="Email Invalido" data-sucess="Correto">Email</label>
+        </div>
+
+        <div class="input-field col s12 m6 l4">
+          <input id="data" type="text" [(ngModel)]="cliente.nascimento" [ngModelOptions]="{standalone: true}">
+          <label for="data">Data de Nascimento</label>
+        </div>
+        <div class="input-field col s12 m6 l4">
+          <select id="sl" class="browser-default" [(ngModel)]="cliente.tipo" [ngModelOptions]="{standalone: true}" >
+            <option value="" disabled selected>Fisica/Juridica</option>
+            <option value="Fisica">Fisica</option>
+            <option value="Juridica">Juridica</option>
+          </select>
+        </div>
+        <div class="input-field col s12 m6 l4">
+          <select class="browser-default" [(ngModel)]="cliente.sexo" [ngModelOptions]="{standalone: true}" >
+            <option value="" disabled selected>Genero</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 m6 l6 ">
+          <input id="rg" type="number" [(ngModel)]="cliente.rg" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="rg" data-error="RG Invalido" data-sucess="Correto">RG</label>
+        </div>
+
+        <div class="input-field col s12 m6 l6">
+          <input id="cpf" type="number" [(ngModel)]="cliente.cpf" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="cpf" data-error="CPF Invalido" data-sucess="Correto">CPF</label>
+        </div>
+
+        <div class="input-field col s12 m6 l6">
+          <input id="pai" type="text" [(ngModel)]="cliente.nomePai" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="pai" data-error="Nome Invalido" data-sucess="Correto">Nome do Pai</label>
+        </div>
+
+        <div class="input-field col s12 m6 l6">
+          <input id="mae" type="text" [(ngModel)]="cliente.nomeMae" [ngModelOptions]="{standalone: true}" class="validate">
+          <label for="mae" data-error="Nome Invalido" data-sucess="Correto">Nome da Mãe</label>
         </div>
 
         <div class="col s12 m6 l4">

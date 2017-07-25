@@ -3,5 +3,4 @@ export class Contato{
     telefone:string;
     celular:string;
     email:string;
-
 }

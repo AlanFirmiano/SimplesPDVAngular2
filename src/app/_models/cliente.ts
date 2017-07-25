@@ -9,9 +9,9 @@ export class Cliente {
   cpf: string;
   rg: string;
   sexo: string;
-  nascimento: Date;
+  nascimento: string;
   nomePai: string;
   nomeMae: string;
-  endereco: Endereco;
-  contato: Contato;
+  endereco: Endereco = new Endereco();
+  contato: Contato = new Contato();
 }

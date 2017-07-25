@@ -1,9 +1,11 @@
-<nav>
+<div class="navbar-fixed">
+<nav >
   <div class="nav-wrapper #e53935 red darken-1">
     <a href="#" class="brand-logo right black-text"><i class="material-icons black-text">shopping_cart</i>{{title}}</a>
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
     <ul id="nav-mobile" class="rigth hide-on-med-and-down">
+      <li routerLinkActive="active"><a routerLink="menu"><i class="material-icons">home</i></a></li>
       <li routerLinkActive="active"><a routerLink="/paciente">Venda</a></li>
       <li routerLinkActive="active"><a routerLink="/atividade">Produtos</a></li>
       <li routerLinkActive="active"><a routerLink="/cliente">Clientes</a></li>
@@ -15,6 +17,7 @@
       <li routerLinkActive="active"><a routerLink="/login">Sair</a></li>
     </ul>
     <ul class="side-nav" id="mobile-demo">
+      <li routerLinkActive="active"><a routerLink="menu"><i class="material-icons">home</i></a></li>
       <li routerLinkActive="active"><a routerLink="/paciente">Venda</a></li>
       <li routerLinkActive="active"><a routerLink="/atividade">Produtos</a></li>
       <li routerLinkActive="active"><a routerLink="/cliente">Clientes</a></li>
@@ -27,7 +30,7 @@
       </ul>
   </div>
 </nav>
-
+</div>
 <div class="row">
   <router-outlet></router-outlet>
 </div>

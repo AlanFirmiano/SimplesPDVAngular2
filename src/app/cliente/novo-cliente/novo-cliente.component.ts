@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'app/_models/cliente';
+import { Endereco } from 'app/_models/endereco';
+import { Contato } from 'app/_models/contato';
 import { ClienteService } from 'app/cliente/cliente.service';
 import { ToastService } from 'app/toast.service';
 
