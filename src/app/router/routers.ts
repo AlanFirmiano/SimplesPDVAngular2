@@ -5,8 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 const APP_ROUTES: Routes = [
   {path:'', redirectTo:'/menu', pathMatch:"full"},
   {path:'menu', loadChildren: 'app/menu/menu.module#MenuModule'},
-  {path:'cliente', loadChildren:'app/cliente/cliente.module#ClienteModule'}
-
+  {path:'cliente', loadChildren:'app/cliente/cliente.module#ClienteModule'},
+  {path:'produto', loadChildren:'app/produto/produto.module#ProdutoModule'}
 ]
 
 @NgModule({

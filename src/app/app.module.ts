@@ -8,8 +8,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './router/routers';
 import { MaterializeModule } from 'angular2-materialize';
 import { ClienteModule } from './cliente/cliente.module';
-import { LoginModule } from './login/login.module'
+import { ProdutoModule } from './produto/produto.module';
+import { LoginModule } from './login/login.module';
 import { MenuModule } from './menu/menu.module';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -20,6 +22,7 @@ import { MenuModule } from './menu/menu.module';
     HttpModule,
     MenuModule,
     ClienteModule,
+    ProdutoModule,
     LoginModule,
     AppRoutingModule,
     MaterializeModule
