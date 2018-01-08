@@ -1,9 +1,10 @@
+import {Cliente} from "./cliente";
+import {Venda} from "./venda";
+
 export class Devendo {
-  id:number;
-  rua:string;
-  bairro:string;
-  numero:string;
-  cidade:string;
-  uf:string;
-  cep:string;
+  id: number;
+  cliente: Cliente = new Cliente();
+  venda: Venda = new Venda();
+  valorEntrada: number;
+  status: boolean;
 }

@@ -1,6 +1,6 @@
 export class Contato{
-    id:number;
-    telefone:string;
-    celular:string;
-    email:string;
+    id: number;
+    telefone: string;
+    celular: string;
+    email: string;
 }

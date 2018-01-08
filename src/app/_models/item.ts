@@ -1,9 +1,9 @@
+import {Produto} from "./produto";
+
 export class Item {
-  id:number;
-  rua:string;
-  bairro:string;
-  numero:string;
-  cidade:string;
-  uf:string;
-  cep:string;
+  id: number;
+  produto: Produto = new Produto();
+  quantidade: number;
+  precoProduto: number;
+  precoTotal: number;
 }

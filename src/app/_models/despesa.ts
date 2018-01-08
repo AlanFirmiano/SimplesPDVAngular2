@@ -1,9 +1,6 @@
 export class Despesa {
-  id:number;
-  rua:string;
-  bairro:string;
-  numero:string;
-  cidade:string;
-  uf:string;
-  cep:string;
-}
+  id: number;
+  nome: string;
+  valor: number;
+  data: Date = new Date();
+  }
